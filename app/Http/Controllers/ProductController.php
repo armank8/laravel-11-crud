@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
-use Illuminate\Validation\Validator;
+
 
 class ProductController extends Controller
 {
@@ -24,11 +24,11 @@ class ProductController extends Controller
             'price' => 'required|numeric',
         ];
 
-        $validator = Validator::make($request->all(),$rules);
+        // $validator = Validator::make($request->all(),$rules);
 
-        if($validator->fails()){
-            return redirect()->route('products.create')->withInput()->withErrors($validator);
-        }
+        // if($validator->fails()){
+        //     return redirect()->route('products.create')->withInput()->withErrors($validator);
+        // }
     }
     //This method will show edit product page
     public function edit(){
